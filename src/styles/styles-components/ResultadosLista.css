@@ -1,0 +1,58 @@
+.resultadoLista {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eeeeee;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: black;
+}
+.resultadoLista-lugar {
+  color: #999999;
+  font-size: 12px;
+  margin-right: 60px;
+  padding-top: 12px;
+}
+.resultadoLista-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  max-width: 80%;
+}
+.resultadoLista-container-informacion-precio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.resultadoLista-container-informacion-precio h2 {
+  font-size: 24px;
+  margin-bottom: 32px;
+  font-weight: 500;
+  display: inline;
+  margin-right: 10px;
+}
+.resultadoLista-container-informacion-precio img {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 5px;
+}
+.resultadoLista-container-informacion-nombre p {
+  font-size: 18px;
+  margin: 0;
+}
+.resultadoLista-container .resultadoLista-img {
+  min-width: 180px;
+  height: 180px;
+  margin-right: 16px;
+  border-radius: 4px;
+}
+
+.resultadoLista:last-child {
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}/*# sourceMappingURL=ResultadosLista.css.map */

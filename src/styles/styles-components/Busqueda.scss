@@ -1,0 +1,28 @@
+.navbar {
+  background-color: #ffe600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .navbar-buscador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 5px;
+
+    .lupa {
+      background-color: #eeeeee;
+      margin-top: 4px;
+      padding: 9px;
+    }
+
+    .navbar-buscador-input {
+      width: 70%;
+      padding: 10px;
+      border: #eeeeee;
+      margin-left: 20px;
+    }
+  }
+}

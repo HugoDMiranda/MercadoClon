@@ -1,0 +1,13 @@
+body {
+  background-color: #eeeeee;
+}
+
+.App {
+  width: 100%;
+}
+.App .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}/*# sourceMappingURL=App.css.map */
