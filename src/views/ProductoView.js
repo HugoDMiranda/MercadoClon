@@ -11,7 +11,9 @@ function ProductoView() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await Axios.get(`http://localhost:3001/api/items/${id}`);
+        const res = await Axios.get(
+          `https://server-mercadoclon-production.up.railway.app/api/items/${id}`
+        );
         setResultado(res.data);
       } catch (err) {
         console.log(err);

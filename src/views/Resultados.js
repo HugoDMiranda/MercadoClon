@@ -14,7 +14,7 @@ function Resultados() {
     const fetchData = async () => {
       try {
         const res = await Axios.get(
-          `http://localhost:3001/api/items${category}`
+          `https://server-mercadoclon-production.up.railway.app/api/items${category}`
         );
         setResultados(res.data);
       } catch (err) {

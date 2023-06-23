@@ -7,18 +7,6 @@ import lupa from "../img/lupa2.png";
 function Busqueda() {
   const [busqueda, setBusqueda] = useState("");
 
-  // const navigate = useNavigate();
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     navigate("/items");
-  //   } catch (err) {
-  //     setErr(err.response.data);
-  //     console.log(err.response.data);
-  //   }
-  // };
-
   return (
     <div className="navbar">
       <div className="navbar-buscador">
