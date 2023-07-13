@@ -1,0 +1,13 @@
+.store-container {
+  &-link {
+    &-img {
+      transition: 0.5s;
+      border-radius: 5px;
+      &:hover {
+        -webkit-box-shadow: 1px 10px 31px -14px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 1px 10px 31px -14px rgba(0, 0, 0, 0.75);
+        box-shadow: 1px 10px 31px -14px rgba(0, 0, 0, 0.75);
+      }
+    }
+  }
+}

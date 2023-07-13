@@ -4,6 +4,7 @@
 .productoView-container {
   background-color: white;
   padding: 32px;
+  margin-bottom: 50px;
 }
 .productoView-container-informacion {
   display: flex;

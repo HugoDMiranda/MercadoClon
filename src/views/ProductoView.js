@@ -12,15 +12,17 @@ function ProductoView() {
     const fetchData = async () => {
       try {
         const res = await Axios.get(
-          `https://server-mercadoclon-production.up.railway.app/api/items/${id}`
+          `https://server-mercadoclon.vercel.app/api/items/${id}`
+          // `http://localhost:3001/api/items/${id}`
         );
         setResultado(res.data);
+        console.log(resultado);
       } catch (err) {
         console.log(err);
       }
     };
     fetchData();
-  }, [id]);
+  }, [id, resultado]);
 
   function separadorMiles(numero) {
     let partesNumero = numero.toString().split(".");
@@ -32,7 +34,7 @@ function ProductoView() {
     <>
       {resultado.length === 0 ? null : (
         <div className="productoView">
-          <Filtros />
+          <Filtros category={resultado.categories} />
           <div className="productoView-container">
             <div className="productoView-container-informacion">
               <img src={resultado.item?.picture} alt="producto" />

@@ -1,16 +1,12 @@
 import React from "react";
 import "../styles/styles-components/Filtros.css";
 
-function Filtros() {
+function Filtros({ category }) {
   return (
     <div className="filtros">
-      <span>Electronica, Audio y Video {">"} </span>
-      <span>IPod {">"} </span>
-      <span>Reproductores {">"} </span>
-      <span>IPod touch {">"} </span>
-      <span>
-        <strong>32GB</strong>
-      </span>
+      {category.map((cate) => {
+        return <span>{cate} &gt;</span>;
+      })}
     </div>
   );
 }

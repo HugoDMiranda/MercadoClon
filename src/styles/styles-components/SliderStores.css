@@ -1,0 +1,14 @@
+.slider-stores {
+  margin: 0;
+}
+.slider-stores .arrow-button {
+  width: 70px;
+  height: 70px;
+  border: none;
+  background-color: white;
+  border-radius: 50%;
+  color: rgb(0, 94, 255);
+}
+.slider-stores .arrow-button:hover {
+  box-shadow: 1px 10px 29px -16px rgba(0, 0, 0, 0.75);
+}/*# sourceMappingURL=SliderStores.css.map */

@@ -1,0 +1,30 @@
+[
+  {
+    "img": "img/stores/store1.png",
+    "store": "centrales"
+  },
+  {
+    "img": "img/stores/store2.png",
+    "store": "nikon"
+  },
+  {
+    "img": "img/stores/store3.png",
+    "store": "asus"
+  },
+  {
+    "img": "img/stores/store4.png",
+    "store": "black and decker"
+  },
+  {
+    "img": "img/stores/store5.png",
+    "store": "adidas"
+  },
+  {
+    "img": "img/stores/store6.png",
+    "store": "samsung"
+  },
+  {
+    "img": "img/stores/store7.png",
+    "store": "lego"
+  }
+]

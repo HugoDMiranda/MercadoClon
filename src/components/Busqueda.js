@@ -8,21 +8,48 @@ function Busqueda() {
   const [busqueda, setBusqueda] = useState("");
 
   return (
-    <div className="navbar">
-      <div className="navbar-buscador">
+    <nav className="navbar">
+      <div className="navbar-logo">
         <Link to={`/`}>
           <img src={logo} alt="MercadoLibreLogo" className="logo" />
         </Link>
-        <input
-          placeholder="Nunca dejes de buscar"
-          className="navbar-buscador-input"
-          onChange={(e) => setBusqueda(e.target.value)}
-        />
-        <Link to={busqueda === "" ? `/` : `/items?search=${busqueda}`}>
-          <img src={lupa} alt="Lupa" className="lupa" />
-        </Link>
+        <p>tu direccion</p>
       </div>
-    </div>
+      <div className="navbar-buscador">
+        <div className="navbar-buscador-nav">
+          <input
+            placeholder="Nunca dejes de buscar"
+            className="navbar-buscador-input"
+            onChange={(e) => setBusqueda(e.target.value)}
+          />
+          <Link to={busqueda === "" ? `/` : `/items?search=${busqueda}`}>
+            <img src={lupa} alt="Lupa" className="lupa" />
+          </Link>
+        </div>
+        <div className="navbar-buscador-opciones">
+          <p>Categorias</p>
+          <p>Ofertas</p>
+          <p>Historial</p>
+          <p>Supermercado</p>
+          <p>Moda</p>
+          <p>Vender</p>
+          <p>Ayuda / PQR</p>
+        </div>
+      </div>
+      <div className="navbar-usuario">
+        <img
+          src="img/mercadoclon-disney.webp"
+          alt="disney"
+          className="disney"
+        />
+
+        <div className="navbar-usuario-opciones">
+          <p>Usuario</p>
+          <p>Mis compras</p>
+          <p>Favoritos</p>
+        </div>
+      </div>
+    </nav>
   );
 }
 

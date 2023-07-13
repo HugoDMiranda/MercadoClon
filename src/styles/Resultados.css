@@ -1,7 +1,14 @@
 .resultados {
+  height: 100%;
   width: 65%;
 }
 .resultados-container {
   background-color: white;
   padding: 16px;
+  margin-bottom: 50px;
+}
+.resultados-container-error {
+  background-color: white;
+  padding: 40px;
+  margin-top: 55px;
 }/*# sourceMappingURL=Resultados.css.map */

@@ -4,9 +4,21 @@ import ResultadosLista from "../components/ResultadosLista";
 import "../styles/Resultados.css";
 import { useLocation } from "react-router-dom";
 import Axios from "axios";
+import Pagination from "../components/Pagination";
 
 function Resultados() {
   const [resultados, setResultados] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(4);
+
+  const lastPostIndex = currentPage * postsPerPage;
+
+  const firstPostIndex = lastPostIndex - postsPerPage;
+
+  const currentPosts =
+    resultados.message === "error"
+      ? null
+      : resultados.slice(firstPostIndex, lastPostIndex);
 
   const category = useLocation().search;
 
@@ -14,7 +26,8 @@ function Resultados() {
     const fetchData = async () => {
       try {
         const res = await Axios.get(
-          `https://server-mercadoclon-production.up.railway.app/api/items${category}`
+          `https://server-mercadoclon.vercel.app/api/items${category}`
+          // `http://localhost:3001/api/items${category}`
         );
         setResultados(res.data);
       } catch (err) {
@@ -26,7 +39,38 @@ function Resultados() {
 
   return (
     <div className="resultados">
-      {resultados[0] === null ? null : <Filtros />}
+      {resultados.message === "error" ? (
+        <div className="resultados-container-error">
+          <div className="resultados-container-error-inf">
+            <h2>No encontramos publicaciones</h2>
+            <p> Revisa que la palabra este bien escrita</p>
+          </div>
+        </div>
+      ) : resultados[0] === undefined ? null : (
+        <>
+          <Filtros category={resultados[0].categories} />
+          <div className="resultados-container">
+            <>
+              {currentPosts.map((resultado) => (
+                <ResultadosLista
+                  resultado={resultado}
+                  key={resultado.id}
+                  id={resultado.id}
+                />
+              ))}
+            </>
+          </div>
+          <Pagination
+            totalPosts={resultados.length}
+            postsPerPage={postsPerPage}
+            setCurrentPage={setCurrentPage}
+            currentPage={currentPage}
+          />
+        </>
+      )}
+      {/* {resultados.message === "error" || resultados[0] === undefined ? null : (
+        <Filtros category={resultados[0].categories} />
+      )}
 
       <div className="resultados-container">
         {resultados.message === "error" ? (
@@ -35,17 +79,23 @@ function Resultados() {
             <p> Revisa que la palabra este bien escrita</p>
           </>
         ) : (
-          resultados.map((resultado) => {
-            return (
+          <>
+            {currentPosts.map((resultado) => (
               <ResultadosLista
                 resultado={resultado}
                 key={resultado.id}
                 id={resultado.id}
               />
-            );
-          })
+            ))}
+            <Pagination
+              totalPosts={resultados.length}
+              postsPerPage={postsPerPage}
+              setCurrentPage={setCurrentPage}
+              currentPage={currentPage}
+            />
+          </>
         )}
-      </div>
+      </div> */}
     </div>
   );
 }

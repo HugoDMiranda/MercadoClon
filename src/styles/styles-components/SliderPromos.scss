@@ -1,0 +1,39 @@
+.slider-promos {
+  div {
+    .selector {
+      position: relative;
+      z-index: 10;
+
+      li {
+        a {
+          width: 5px;
+          height: 5px;
+        }
+      }
+    }
+
+    .arrow-button {
+      width: 70px;
+      height: 70px;
+      border: none;
+      background-color: white;
+      border-radius: 50%;
+      color: rgb(0, 94, 255);
+      &:hover {
+        -webkit-box-shadow: 1px 10px 29px -16px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 1px 10px 29px -16px rgba(0, 0, 0, 0.75);
+        box-shadow: 1px 10px 29px -16px rgba(0, 0, 0, 0.75);
+      }
+    }
+  }
+}
+
+.carousel-inner {
+  max-height: 300px;
+  div {
+    object-fit: cover;
+    img {
+      object-fit: cover;
+    }
+  }
+}

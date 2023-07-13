@@ -3,6 +3,8 @@ import Busqueda from "./components/Busqueda";
 import Resultados from "./views/Resultados";
 import ProductoView from "./views/ProductoView";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import Home from "./views/Home";
+import Footer from "./components/Footer";
 
 const Layout = () => {
   return (
@@ -11,6 +13,7 @@ const Layout = () => {
       <div className="container">
         <Outlet />
       </div>
+      <Footer />
     </>
   );
 };
@@ -18,17 +21,12 @@ const Layout = () => {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <>
-        <Busqueda />
-        {/* <ProductoView /> */}
-      </>
-    ),
-  },
-  {
-    path: "/",
     element: <Layout />,
     children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
       {
         path: "/items",
         element: <Resultados />,
