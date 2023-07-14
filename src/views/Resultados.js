@@ -68,34 +68,6 @@ function Resultados() {
           />
         </>
       )}
-      {/* {resultados.message === "error" || resultados[0] === undefined ? null : (
-        <Filtros category={resultados[0].categories} />
-      )}
-
-      <div className="resultados-container">
-        {resultados.message === "error" ? (
-          <>
-            <h1>No encontramos publicaciones</h1>
-            <p> Revisa que la palabra este bien escrita</p>
-          </>
-        ) : (
-          <>
-            {currentPosts.map((resultado) => (
-              <ResultadosLista
-                resultado={resultado}
-                key={resultado.id}
-                id={resultado.id}
-              />
-            ))}
-            <Pagination
-              totalPosts={resultados.length}
-              postsPerPage={postsPerPage}
-              setCurrentPage={setCurrentPage}
-              currentPage={currentPage}
-            />
-          </>
-        )}
-      </div> */}
     </div>
   );
 }

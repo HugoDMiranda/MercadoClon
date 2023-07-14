@@ -58,3 +58,12 @@
     }
   }
 }
+
+@media (max-width: 430px) {
+  .productoView {
+    width: 95%;
+    .productoView-container {
+      padding: 10px;
+    }
+  }
+}

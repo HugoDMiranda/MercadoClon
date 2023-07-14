@@ -45,7 +45,7 @@
   margin: 0;
 }
 .resultadoLista-container .resultadoLista-img {
-  min-width: 180px;
+  max-width: 180px;
   height: 180px;
   margin-right: 16px;
   border-radius: 4px;
@@ -55,4 +55,15 @@
   border: none;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .resultadoLista-container {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 430px) {
+  .resultadoLista .resultadoLista-container .resultadoLista-img {
+    height: auto;
+  }
 }/*# sourceMappingURL=ResultadosLista.css.map */

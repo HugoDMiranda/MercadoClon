@@ -105,3 +105,19 @@
     }
   }
 }
+
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+
+    .navbar-logo {
+      align-items: flex-start;
+    }
+
+    .navbar-buscador {
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

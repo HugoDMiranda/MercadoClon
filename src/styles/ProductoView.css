@@ -48,4 +48,13 @@
 }
 .productoView-container-descripcion p {
   color: #999999;
+}
+
+@media (max-width: 430px) {
+  .productoView {
+    width: 95%;
+  }
+  .productoView .productoView-container {
+    padding: 10px;
+  }
 }/*# sourceMappingURL=ProductoView.css.map */

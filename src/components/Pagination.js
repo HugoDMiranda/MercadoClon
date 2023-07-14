@@ -17,7 +17,7 @@ function Pagination({ totalPosts, postsPerPage, setCurrentPage, currentPage }) {
             : setCurrentPage(currentPage - 1)
         }
       >
-        &lt; Anterior
+        &lt;Anterior
       </button>
       {pages.map((page, index) => {
         return (
@@ -39,7 +39,7 @@ function Pagination({ totalPosts, postsPerPage, setCurrentPage, currentPage }) {
             : setCurrentPage(currentPage + 1)
         }
       >
-        Siguiente &gt;
+        Siguiente&gt;
       </button>
     </div>
   );
