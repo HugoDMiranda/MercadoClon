@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/styles-components/Busqueda.css";
 import logo from "../img/logo2.png";
 import lupa from "../img/lupa2.png";
+import { CartContext } from "../context/CartContext";
 
 function Busqueda() {
   const [busqueda, setBusqueda] = useState("");
+  const [cart, setCart] = useContext(CartContext);
+
+  const quantity = cart.reduce((acc, curr) => {
+    return acc + curr.quantity;
+  }, 0);
 
   return (
     <nav className="navbar">
@@ -47,6 +53,7 @@ function Busqueda() {
           <p>Usuario</p>
           <p>Mis compras</p>
           <p>Favoritos</p>
+          <Link to={`/cart`}>Carrito {quantity}</Link>
         </div>
       </div>
     </nav>

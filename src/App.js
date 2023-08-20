@@ -5,6 +5,8 @@ import ProductoView from "./views/ProductoView";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Home from "./views/Home";
 import Footer from "./components/Footer";
+import Cart from "./views/Cart";
+import { ShoppingCartProvider } from "./context/CartContext";
 
 const Layout = () => {
   return (
@@ -35,6 +37,10 @@ const router = createBrowserRouter([
         path: "/items/:id",
         element: <ProductoView />,
       },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
     ],
   },
 ]);
@@ -42,7 +48,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <ShoppingCartProvider>
+        <RouterProvider router={router} />
+      </ShoppingCartProvider>
     </div>
   );
 }

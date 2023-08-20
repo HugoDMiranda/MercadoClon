@@ -1,12 +1,40 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../styles/ProductoView.css";
 import Filtros from "../components/Filtros";
 import Axios from "axios";
 import { useParams } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
 function ProductoView() {
   let { id } = useParams();
   const [resultado, setResultado] = useState([]);
+  const [cart, setCart] = useContext(CartContext);
+
+  const addCart = () => {
+    setCart((currItems) => {
+      const isItemsFound = currItems.find((item) => item.id === id);
+      if (isItemsFound) {
+        return currItems.map((item) => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity + 1 };
+          } else {
+            return item;
+          }
+        });
+      } else {
+        return [
+          ...currItems,
+          {
+            id,
+            quantity: 1,
+            price: resultado.item?.price.price,
+            img: resultado.item?.picture,
+            name: resultado.item?.title,
+          },
+        ];
+      }
+    });
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,13 +44,12 @@ function ProductoView() {
           // `http://localhost:3001/api/items/${id}`
         );
         setResultado(res.data);
-        console.log(resultado);
       } catch (err) {
         console.log(err);
       }
     };
     fetchData();
-  }, [id, resultado]);
+  }, [id, resultado, cart]);
 
   function separadorMiles(numero) {
     let partesNumero = numero.toString().split(".");
@@ -47,6 +74,7 @@ function ProductoView() {
                 <h2>{resultado.item?.title}</h2>
                 <h1>$ {separadorMiles(resultado.item?.price.price)}</h1>
                 <button>Comprar</button>
+                <button onClick={() => addCart()}>Agregar al carrito</button>
               </div>
             </div>
             <div className="productoView-container-descripcion">
