@@ -73,8 +73,15 @@ function ProductoView() {
                 </p>
                 <h2>{resultado.item?.title}</h2>
                 <h1>$ {separadorMiles(resultado.item?.price.price)}</h1>
-                <button>Comprar</button>
-                <button onClick={() => addCart()}>Agregar al carrito</button>
+                <button className="productoView-container-informacion-compra-buttonBuy">
+                  Comprar ahora
+                </button>
+                <button
+                  className="productoView-container-informacion-compra-buttonAdd"
+                  onClick={() => addCart()}
+                >
+                  Agregar al carrito
+                </button>
               </div>
             </div>
             <div className="productoView-container-descripcion">

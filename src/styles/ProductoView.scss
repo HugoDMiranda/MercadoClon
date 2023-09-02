@@ -19,6 +19,27 @@
 
       &-compra {
         width: 230px;
+
+        &-buttonBuy {
+          background-color: #3483fa;
+          color: white;
+          transition: 0.5s;
+          &:hover {
+            background-color: #0959d0;
+          }
+          &:active {
+            background-color: #0847a6;
+          }
+        }
+
+        &-buttonAdd {
+          background-color: rgb(225, 246, 255);
+          color: #3483fa;
+          transition: 0.5s;
+          &:active {
+            background-color: rgb(209, 228, 236);
+          }
+        }
         p {
           margin-top: 0;
           margin-bottom: 16px;
@@ -41,10 +62,12 @@
         button {
           width: 100%;
           height: 40px;
-          background-color: #3483fa;
           border: none;
-          color: white;
           border-radius: 5px;
+          cursor: pointer;
+          margin-bottom: 7px;
+          font-weight: 700;
+          font-size: 14px;
         }
       }
     }
