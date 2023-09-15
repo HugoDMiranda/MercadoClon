@@ -122,7 +122,7 @@ function Cart() {
                 </div>
                 <div className="cart-container-empty-info">
                   <p>Total con envio</p>
-                  <span>{totalPrice}</span>
+                  <span>${Number(totalPrice)} </span>
                 </div>
                 <div className="cart-container-empty-info">
                   <button>comprar</button>
