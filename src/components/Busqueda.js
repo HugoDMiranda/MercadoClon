@@ -5,6 +5,7 @@ import logo from "../img/logo2.png";
 import lupa from "../img/lupa2.png";
 import { CartContext } from "../context/CartContext";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { GoBell } from "react-icons/go";
 
 function Busqueda() {
   const [busqueda, setBusqueda] = useState("");
@@ -54,6 +55,9 @@ function Busqueda() {
           <p>Usuario</p>
           <p>Mis compras</p>
           <p>Favoritos</p>
+          <Link>
+            <GoBell />
+          </Link>
           <Link to={`/cart`}>
             <AiOutlineShoppingCart /> {quantity}
           </Link>

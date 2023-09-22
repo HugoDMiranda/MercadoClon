@@ -1,0 +1,11 @@
+.payment {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  flex: row;
+  margin: 15px 0;
+}
+.payment div h3 {
+  margin: 0;
+}/*# sourceMappingURL=MediosDePago.css.map */
