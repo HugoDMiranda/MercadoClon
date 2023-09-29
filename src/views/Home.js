@@ -27,6 +27,7 @@ function Home() {
         <MediosDePago
           paymentText={`Mas medios de pago`}
           paymentIcon={<AiFillPlusCircle size={30} />}
+          paymentMore={`Ver todos`}
         />
       </div>
       <div className="home-stores">
