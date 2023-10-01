@@ -7,6 +7,7 @@ import Home from "./views/Home";
 import Footer from "./components/Footer";
 import Cart from "./views/Cart";
 import { ShoppingCartProvider } from "./context/CartContext";
+import NoAvailable from "./views/NoAvailable";
 
 const Layout = () => {
   return (
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path: "/noAvailable",
+        element: <NoAvailable />,
       },
     ],
   },

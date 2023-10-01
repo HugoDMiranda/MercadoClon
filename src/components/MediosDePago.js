@@ -6,10 +6,14 @@ function MediosDePago({ paymentText, paymentIcon, paymentMore }) {
   return (
     <>
       <div className="payment">
-        <Link className="payment-icon">{paymentIcon}</Link>
+        <Link className="payment-icon" to={`/noAvailable`}>
+          {paymentIcon}
+        </Link>
         <div>
           <h3>{paymentText}</h3>
-          <Link>{paymentMore ? paymentMore : `Ver mas`}</Link>
+          <Link to={`/noAvailable`}>
+            {paymentMore ? paymentMore : `Ver mas`}
+          </Link>
         </div>
       </div>
     </>

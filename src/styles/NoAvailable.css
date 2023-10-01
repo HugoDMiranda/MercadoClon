@@ -1,0 +1,18 @@
+.noavailable {
+  height: 100%;
+  width: 65%;
+}
+.noavailable-container {
+  background-color: white;
+  padding: 16px;
+  margin-bottom: 50px;
+  padding: 40px;
+  margin-top: 55px;
+  width: 65%;
+}
+.noavailable-container-inf {
+  background-color: white;
+}
+.noavailable-container-inf h2 {
+  margin: 0;
+}/*# sourceMappingURL=NoAvailable.css.map */
