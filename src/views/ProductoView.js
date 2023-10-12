@@ -44,6 +44,7 @@ function ProductoView() {
           // `http://localhost:3001/api/items/${id}`
         );
         setResultado(res.data);
+        console.log(resultado);
       } catch (err) {
         console.log(err);
       }

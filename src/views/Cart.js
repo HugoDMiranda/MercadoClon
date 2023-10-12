@@ -23,8 +23,6 @@ function Cart() {
     let totalPrice = suma(prices).toFixed(1);
 
     setTotalPrice(totalPrice);
-
-    console.log(totalPrice);
   }, [cart]);
 
   const quantity = cart.reduce((acc, curr) => {
@@ -73,6 +71,12 @@ function Cart() {
     });
   };
 
+  function separadorMiles(numero) {
+    let partesNumero = numero.toString().split(".");
+    partesNumero[0] = partesNumero[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    return partesNumero.join(".");
+  }
+
   return (
     <div className="cart">
       <div className="cart-container">
@@ -113,7 +117,9 @@ function Cart() {
                       <span>{cartItem.quantity}</span>
                       <button onClick={() => addCart(cartItem.id)}>+</button>
                     </div>
-                    <h3>${cartItem.price * cartItem.quantity} </h3>
+                    <h3>
+                      ${separadorMiles(cartItem.price * cartItem.quantity)}{" "}
+                    </h3>
                   </div>
                 ))}
                 <div className="cart-container-empty-info">
@@ -122,7 +128,7 @@ function Cart() {
                 </div>
                 <div className="cart-container-empty-info">
                   <p>Total con envio</p>
-                  <span>${Number(totalPrice)} </span>
+                  <span>${separadorMiles(Number(totalPrice))} </span>
                 </div>
                 <div className="cart-container-empty-info">
                   <button>comprar</button>
