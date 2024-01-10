@@ -8,11 +8,13 @@ import Footer from "./components/Footer";
 import Cart from "./views/Cart";
 import { ShoppingCartProvider } from "./context/CartContext";
 import NoAvailable from "./views/NoAvailable";
+import Navbar from "./components/Navbar";
 
 const Layout = () => {
   return (
     <>
-      <Busqueda />
+      {/* <Busqueda /> */}
+      <Navbar />
       <div className="container">
         <Outlet />
       </div>
