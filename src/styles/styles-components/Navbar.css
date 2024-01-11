@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  flex-direction: column;
+}
+.navbar div {
+  width: 80%;
+}
+.navbar-search {
+  display: flex;
+}
+.navbar-info {
+  display: flex;
+}
+.navbar-info p {
+  margin: 0 10px 0 0;
+}/*# sourceMappingURL=Navbar.css.map */

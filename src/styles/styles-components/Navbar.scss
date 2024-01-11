@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  flex-direction: column;
+
+  div {
+    width: 80%;
+  }
+
+  &-search {
+    display: flex;
+  }
+  &-info {
+    display: flex;
+    p {
+      margin: 0 10px 0 0;
+    }
+  }
+}

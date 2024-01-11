@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import "../styles/styles-components/Navbar.css";
 import { Link } from "react-router-dom";
 import logo from "../img/logo2.png";
 import lupa from "../img/lupa2.png";
@@ -14,39 +15,41 @@ function Navbar() {
     return acc + curr.quantity;
   }, 0);
   return (
-    <nav>
+    <nav className="navbar">
       <div>
-        <Link to={`/`}>
-          <img src={logo} alt="MercadoLibreLogo" className="logo" />
-        </Link>
-        <div className="navbar-buscador-nav">
-          <input
-            placeholder="Nunca dejes de buscar"
-            className="navbar-buscador-input"
-            onChange={(e) => setBusqueda(e.target.value)}
-          />
-          <Link to={busqueda === "" ? `/` : `/items?search=${busqueda}`}>
-            <img src={lupa} alt="Lupa" className="lupa" />
+        <div className="navbar-search">
+          <Link to={`/`}>
+            <img src={logo} alt="MercadoLibreLogo" className="logo" />
+          </Link>
+          <div className="navbar-buscador-nav">
+            <input
+              placeholder="Nunca dejes de buscar"
+              className="navbar-buscador-input"
+              onChange={(e) => setBusqueda(e.target.value)}
+            />
+            <Link to={busqueda === "" ? `/` : `/items?search=${busqueda}`}>
+              <img src={lupa} alt="Lupa" className="lupa" />
+            </Link>
+          </div>
+        </div>
+        <div className="navbar-info">
+          <p>Categorias</p>
+          <p>Ofertas</p>
+          <p>Historial</p>
+          <p>Supermercado</p>
+          <p>Moda</p>
+          <p>Vender</p>
+          <p>Ayuda / PQR</p>
+          <p>Usuario</p>
+          <p>Mis compras</p>
+          <p>Favoritos</p>
+          <Link>
+            <GoBell />
+          </Link>
+          <Link to={`/cart`}>
+            <AiOutlineShoppingCart /> {quantity}
           </Link>
         </div>
-      </div>
-      <div>
-        <p>Categorias</p>
-        <p>Ofertas</p>
-        <p>Historial</p>
-        <p>Supermercado</p>
-        <p>Moda</p>
-        <p>Vender</p>
-        <p>Ayuda / PQR</p>
-        <p>Usuario</p>
-        <p>Mis compras</p>
-        <p>Favoritos</p>
-        <Link>
-          <GoBell />
-        </Link>
-        <Link to={`/cart`}>
-          <AiOutlineShoppingCart /> {quantity}
-        </Link>
       </div>
     </nav>
   );
