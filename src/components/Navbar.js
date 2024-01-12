@@ -21,10 +21,10 @@ function Navbar() {
           <Link to={`/`}>
             <img src={logo} alt="MercadoLibreLogo" className="logo" />
           </Link>
-          <div className="navbar-buscador-nav">
+          <div className="navbar-search-bar">
             <input
               placeholder="Nunca dejes de buscar"
-              className="navbar-buscador-input"
+              className="navbar-search-bar-input"
               onChange={(e) => setBusqueda(e.target.value)}
             />
             <Link to={busqueda === "" ? `/` : `/items?search=${busqueda}`}>

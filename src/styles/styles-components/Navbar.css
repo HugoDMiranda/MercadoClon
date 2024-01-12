@@ -11,8 +11,29 @@
 .navbar-search {
   display: flex;
 }
+.navbar-search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-search-bar-input {
+  width: 100%;
+  padding: 10px;
+  border: #eeeeee;
+  box-shadow: 1px 10px 18px -16px rgba(0, 0, 0, 0.75);
+}
+.navbar-search-bar-input:focus-visible {
+  border: 1px solid blue;
+  outline: none;
+}
+.navbar-search-bar .lupa {
+  min-width: 35px;
+  background-color: #515151;
+  padding: 11px;
+}
 .navbar-info {
   display: flex;
+  flex-wrap: wrap;
 }
 .navbar-info p {
   margin: 0 10px 0 0;
