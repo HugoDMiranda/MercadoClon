@@ -15,8 +15,8 @@ function Navbar() {
     return acc + curr.quantity;
   }, 0);
   return (
-    <nav className="navbar">
-      <div>
+    <nav className="navbar-container">
+      <div className="navbar">
         <div className="navbar-search">
           <Link to={`/`}>
             <img src={logo} alt="MercadoLibreLogo" className="logo" />
@@ -33,22 +33,26 @@ function Navbar() {
           </div>
         </div>
         <div className="navbar-info">
-          <p>Categorias</p>
-          <p>Ofertas</p>
-          <p>Historial</p>
-          <p>Supermercado</p>
-          <p>Moda</p>
-          <p>Vender</p>
-          <p>Ayuda / PQR</p>
-          <p>Usuario</p>
-          <p>Mis compras</p>
-          <p>Favoritos</p>
-          <Link>
-            <GoBell />
-          </Link>
-          <Link to={`/cart`}>
-            <AiOutlineShoppingCart /> {quantity}
-          </Link>
+          <div className="navbar-info-shop">
+            <p>Categorias</p>
+            <p>Ofertas</p>
+            <p>Historial</p>
+            <p>Supermercado</p>
+            <p>Moda</p>
+            <p>Vender</p>
+            <p>Ayuda / PQR</p>
+          </div>
+          <div className="navbar-info-user">
+            <p>Usuario</p>
+            <p>Mis compras</p>
+            <p>Favoritos</p>
+            <Link>
+              <GoBell />
+            </Link>
+            <Link to={`/cart`}>
+              <AiOutlineShoppingCart /> {quantity}
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

@@ -7,6 +7,7 @@
 }
 .navbar div {
   width: 80%;
+  display: flex;
 }
 .navbar-search {
   display: flex;
@@ -33,8 +34,19 @@
 }
 .navbar-info {
   display: flex;
-  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-bottom: 10px;
 }
 .navbar-info p {
   margin: 0 10px 0 0;
+  font-size: 13px;
+}
+.navbar-info-shop, .navbar-info-user {
+  display: flex;
+  flex-wrap: wrap;
+}
+.navbar-info-user {
+  justify-content: flex-end;
 }/*# sourceMappingURL=Navbar.css.map */

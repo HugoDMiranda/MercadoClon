@@ -7,6 +7,7 @@
 
   div {
     width: 80%;
+    display: flex;
   }
 
   &-search {
@@ -39,9 +40,23 @@
   }
   &-info {
     display: flex;
-    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    // flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 10px;
     p {
       margin: 0 10px 0 0;
+      font-size: 13px;
+    }
+    &-shop,
+    &-user {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &-user {
+      justify-content: flex-end;
     }
   }
 }
