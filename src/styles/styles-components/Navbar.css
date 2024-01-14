@@ -4,6 +4,7 @@
   justify-content: space-around;
   width: 100%;
   flex-direction: column;
+  box-shadow: 1px 10px 18px -16px rgba(0, 0, 0, 0.75);
 }
 .navbar div {
   width: 80%;
@@ -18,7 +19,7 @@
   justify-content: center;
 }
 .navbar-search-bar-input {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   border: #eeeeee;
   box-shadow: 1px 10px 18px -16px rgba(0, 0, 0, 0.75);
