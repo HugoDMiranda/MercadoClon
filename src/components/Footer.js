@@ -14,7 +14,7 @@ function Footer() {
           <p>www.sic.gov.co</p>
         </div>
         <p>Copyright © 1999-2023 MercadoLibre Colombia LTDA.</p>
-        <p>Carrera 17 Numero 93 - 09 Piso 3, Bogotá D.C., Colombia</p>
+        <p>Carrera XX Numero XX - XX Piso X, Bogotá D.C., Colombia</p>
       </div>
       <div className="footer-container-seguridad">
         <img src="img/footer/seguridad2.png" alt="seguridad2" />

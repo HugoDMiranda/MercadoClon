@@ -12,6 +12,15 @@
 }
 .navbar-search {
   display: flex;
+  flex-wrap: wrap;
+}
+.navbar-search-logo {
+  color: black;
+  height: 45px;
+  font-weight: 700;
+}
+.navbar-search-logo:hover {
+  color: black;
 }
 .navbar-search-bar {
   display: flex;

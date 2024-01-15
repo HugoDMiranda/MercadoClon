@@ -15,6 +15,16 @@
 
   &-search {
     display: flex;
+    flex-wrap: wrap;
+
+    &-logo {
+      color: black;
+      height: 45px;
+      font-weight: 700;
+      &:hover {
+        color: black;
+      }
+    }
 
     &-bar {
       display: flex;
