@@ -15,6 +15,7 @@ function Footer() {
         </div>
         <p>Copyright © 1999-2023 MercadoLibre Colombia LTDA.</p>
         <p>Carrera XX Numero XX - XX Piso X, Bogotá D.C., Colombia</p>
+        <p>Un Clon de una pagina XXX DDD</p>
       </div>
       <div className="footer-container-seguridad">
         <img src="img/footer/seguridad2.png" alt="seguridad2" />

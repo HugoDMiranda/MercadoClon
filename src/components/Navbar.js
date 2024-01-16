@@ -5,6 +5,7 @@ import logo from "../img/logo2.png";
 import lupa from "../img/lupa2.png";
 import { CartContext } from "../context/CartContext";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import { GoBell } from "react-icons/go";
 
 function Navbar() {
@@ -35,6 +36,10 @@ function Navbar() {
         </div>
         <div className="navbar-info">
           <div className="navbar-info-shop">
+            <p>
+              <FaMapMarkerAlt />
+              Ubicacion
+            </p>
             <p>Categorias</p>
             <p>Ofertas</p>
             <p>Historial</p>
