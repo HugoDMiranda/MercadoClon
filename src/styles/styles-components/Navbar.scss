@@ -45,9 +45,11 @@
       }
 
       .lupa {
-        min-width: 35px;
-        background-color: #515151;
+        min-width: 25px;
+        max-width: 37px;
+        background-color: white;
         padding: 11px;
+        border-left: 1px rgb(225, 225, 225) solid;
       }
     }
   }
