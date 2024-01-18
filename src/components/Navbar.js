@@ -21,7 +21,7 @@ function Navbar() {
         <div className="navbar-search">
           <Link to={`/`} className="navbar-search-logo">
             <img src={logo} alt="MercadoLibreLogo" className="logo" />
-            EcomemerceClone
+            EcommerceClone
           </Link>
           <div className="navbar-search-bar">
             <input
