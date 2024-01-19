@@ -3,8 +3,9 @@
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  min-height: 100px;
   flex-direction: column;
-  box-shadow: 1px 10px 18px -16px rgba(0, 0, 0, 0.75);
+  background-color: rgb(255, 241, 89);
 }
 .navbar div {
   width: 80%;
@@ -61,4 +62,11 @@
 }
 .navbar-info-user {
   justify-content: flex-end;
+}
+.navbar-info-user a {
+  color: #666;
+  transition: 0.5s;
+}
+.navbar-info-user a:hover {
+  color: black;
 }/*# sourceMappingURL=Navbar.css.map */

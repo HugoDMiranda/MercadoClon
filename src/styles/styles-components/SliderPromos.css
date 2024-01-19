@@ -1,3 +1,7 @@
+img {
+  margin: 0px;
+}
+
 .slider-promos div .selector {
   position: relative;
   z-index: 10;

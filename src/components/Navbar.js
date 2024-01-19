@@ -6,7 +6,6 @@ import lupa from "../img/lupa2.png";
 import { CartContext } from "../context/CartContext";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import { GoBell } from "react-icons/go";
 
 function Navbar() {
   const [busqueda, setBusqueda] = useState("");
@@ -52,9 +51,6 @@ function Navbar() {
             <p>Usuario</p>
             <p>Mis compras</p>
             <p>Favoritos</p>
-            <Link>
-              <GoBell />
-            </Link>
             <Link to={`/cart`}>
               <AiOutlineShoppingCart /> {quantity}
             </Link>
