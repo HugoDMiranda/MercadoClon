@@ -37,6 +37,14 @@
       align-items: center;
       justify-content: center;
 
+      a {
+        background-color: rgb(226, 226, 226);
+        border: 1px solid black;
+        color: black;
+        border-radius: 10px;
+        padding: 5px;
+      }
+
       &-products {
         display: flex;
         width: 100%;

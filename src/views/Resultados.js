@@ -27,7 +27,6 @@ function Resultados() {
       try {
         const res = await Axios.get(
           `https://server-mercadoclon.vercel.app/api/items${category}`
-          // `http://localhost:3001/api/items${category}`
         );
         setResultados(res.data);
       } catch (err) {

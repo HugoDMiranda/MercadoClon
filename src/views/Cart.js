@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import "../styles/Car.css";
 import { CartContext } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 function Cart() {
   const [car, setCar] = useState(true);
@@ -104,7 +105,7 @@ function Cart() {
               <>
                 <h4>Tu carrito está vacío</h4>
                 <p>¿No sabes qué comprar? ¡Miles de productos te esperan!</p>
-                <button>Descubrir ofertas</button>
+                <Link to={`/`}>Descubrir ofertas</Link>
               </>
             ) : (
               <>

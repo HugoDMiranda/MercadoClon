@@ -41,7 +41,6 @@ function ProductoView() {
       try {
         const res = await Axios.get(
           `https://server-mercadoclon.vercel.app/api/items/${id}`
-          // `http://localhost:3001/api/items/${id}`
         );
         setResultado(res.data);
         console.log(resultado);
