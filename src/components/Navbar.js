@@ -51,8 +51,8 @@ function Navbar() {
             <p>Usuario</p>
             <p>Mis compras</p>
             <p>Favoritos</p>
-            <Link to={`/cart`}>
-              <AiOutlineShoppingCart /> {quantity}
+            <Link to={`/cart`} className="navbar-info-user-cart">
+              <AiOutlineShoppingCart /> <p>{quantity}</p>
             </Link>
           </div>
         </div>

@@ -5,7 +5,7 @@
   width: 100%;
   min-height: 100px;
   flex-direction: column;
-  background-color: rgba(255, 241, 89, 255);
+  background-color: rgba(255, 230, 0);
 
   div {
     width: 80%;
@@ -17,11 +17,11 @@
     flex-wrap: wrap;
 
     &-logo {
-      color: black;
+      color: rgb(0, 0, 167);
       height: 45px;
       font-weight: 700;
       &:hover {
-        color: black;
+        color: rgb(0, 0, 167);
       }
     }
 
@@ -71,6 +71,27 @@
 
     &-user {
       justify-content: flex-end;
+
+      &-cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p,
+        svg {
+          position: absolute;
+        }
+        p {
+          margin: 0;
+          margin-bottom: 25px;
+          margin-left: 15px;
+          background-color: red;
+          text-align: center;
+          color: black;
+          padding: 0px 6px;
+          border-radius: 50%;
+          font-weight: 500;
+        }
+      }
 
       a {
         color: #666;

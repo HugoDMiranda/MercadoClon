@@ -5,7 +5,7 @@
   width: 100%;
   min-height: 100px;
   flex-direction: column;
-  background-color: rgb(255, 241, 89);
+  background-color: rgb(255, 230, 0);
 }
 .navbar div {
   width: 80%;
@@ -16,12 +16,12 @@
   flex-wrap: wrap;
 }
 .navbar-search-logo {
-  color: black;
+  color: rgb(0, 0, 167);
   height: 45px;
   font-weight: 700;
 }
 .navbar-search-logo:hover {
-  color: black;
+  color: rgb(0, 0, 167);
 }
 .navbar-search-bar {
   display: flex;
@@ -62,6 +62,26 @@
 }
 .navbar-info-user {
   justify-content: flex-end;
+}
+.navbar-info-user-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-info-user-cart p,
+.navbar-info-user-cart svg {
+  position: absolute;
+}
+.navbar-info-user-cart p {
+  margin: 0;
+  margin-bottom: 25px;
+  margin-left: 15px;
+  background-color: red;
+  text-align: center;
+  color: black;
+  padding: 0px 6px;
+  border-radius: 50%;
+  font-weight: 500;
 }
 .navbar-info-user a {
   color: #666;
