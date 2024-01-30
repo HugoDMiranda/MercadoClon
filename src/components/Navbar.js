@@ -52,7 +52,9 @@ function Navbar() {
             <p>Mis compras</p>
             <p>Favoritos</p>
             <Link to={`/cart`} className="navbar-info-user-cart">
-              <AiOutlineShoppingCart /> <p>{quantity}</p>
+              <AiOutlineShoppingCart />
+              {quantity ? <p>{quantity}</p> : null}
+              {/* +9 */}
             </Link>
           </div>
         </div>

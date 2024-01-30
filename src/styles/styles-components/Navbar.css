@@ -20,7 +20,7 @@
   height: 45px;
   font-weight: 700;
 }
-.navbar-search-logo:hover {
+.navbar-search-logo:visited:hover {
   color: rgb(0, 0, 167);
 }
 .navbar-search-bar {
