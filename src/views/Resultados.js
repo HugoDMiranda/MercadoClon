@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Filtros from "../components/Filtros";
 import ResultadosLista from "../components/ResultadosLista";
 import "../styles/Resultados.css";
@@ -50,13 +50,15 @@ function Resultados() {
           <Filtros category={resultados[0].categories} />
           <div className="resultados-container">
             <>
-              {currentPosts.map((resultado) => (
-                <ResultadosLista
-                  resultado={resultado}
-                  key={resultado.id}
-                  id={resultado.id}
-                />
-              ))}
+              <Suspense fallback={<p>Loading...</p>}>
+                {currentPosts.map((resultado) => (
+                  <ResultadosLista
+                    resultado={resultado}
+                    key={resultado.id}
+                    id={resultado.id}
+                  />
+                ))}
+              </Suspense>
             </>
           </div>
           <Pagination
