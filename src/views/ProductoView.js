@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { Suspense, useContext, useEffect, useState } from "react";
 import "../styles/ProductoView.css";
 import Filtros from "../components/Filtros";
 import Axios from "axios";
@@ -58,7 +58,7 @@ function ProductoView() {
   }
 
   return (
-    <>
+    <Suspense fallback={<p>Loading...</p>}>
       {resultado.length === 0 ? null : (
         <div className="productoView">
           <Filtros category={resultado.categories} />
@@ -91,7 +91,7 @@ function ProductoView() {
           </div>
         </div>
       )}
-    </>
+    </Suspense>
   );
 }
 
