@@ -1,14 +1,16 @@
 import "./styles/App.css";
 import Busqueda from "./components/Busqueda";
-import Resultados from "./views/Resultados";
-import ProductoView from "./views/ProductoView";
+import { lazy, Suspense } from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import Home from "./views/Home";
-import Footer from "./components/Footer";
-import Cart from "./views/Cart";
 import { ShoppingCartProvider } from "./context/CartContext";
-import NoAvailable from "./views/NoAvailable";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+const Home = lazy(() => import("./views/Home"));
+const Resultados = lazy(() => import("./views/Resultados"));
+const Cart = lazy(() => import("./views/Cart"));
+const ProductoView = lazy(() => import("./views/ProductoView"));
+const NoAvailable = lazy(() => import("./views/NoAvailable"));
 
 const Layout = () => {
   return (
@@ -16,7 +18,9 @@ const Layout = () => {
       {/* <Busqueda /> */}
       <Navbar />
       <div className="container">
-        <Outlet />
+        <Suspense fallback={<h2>Loading...</h2>}>
+          <Outlet />
+        </Suspense>
       </div>
       <Footer />
     </>
