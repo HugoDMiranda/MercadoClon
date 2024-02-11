@@ -61,6 +61,7 @@ function Resultados() {
               </Suspense>
             </>
           </div>
+
           <Pagination
             totalPosts={resultados.length}
             postsPerPage={postsPerPage}

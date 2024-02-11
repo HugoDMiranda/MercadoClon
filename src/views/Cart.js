@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, Suspense } from "react";
 import "../styles/Car.css";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
@@ -110,18 +110,22 @@ function Cart() {
             ) : (
               <>
                 {cart.map((cartItem) => (
-                  <div className="cart-container-empty-products">
-                    <img src={cartItem.img} alt="producto" />
-                    <p>{cartItem.name}</p>
-                    <div className="cart-container-empty-products-buttons">
-                      <button onClick={() => removeItem(cartItem.id)}>-</button>
-                      <span>{cartItem.quantity}</span>
-                      <button onClick={() => addCart(cartItem.id)}>+</button>
+                  <Suspense fallback={<p>Loading...</p>}>
+                    <div className="cart-container-empty-products">
+                      <img src={cartItem.img} alt="producto" />
+                      <p>{cartItem.name}</p>
+                      <div className="cart-container-empty-products-buttons">
+                        <button onClick={() => removeItem(cartItem.id)}>
+                          -
+                        </button>
+                        <span>{cartItem.quantity}</span>
+                        <button onClick={() => addCart(cartItem.id)}>+</button>
+                      </div>
+                      <h3>
+                        ${separadorMiles(cartItem.price * cartItem.quantity)}{" "}
+                      </h3>
                     </div>
-                    <h3>
-                      ${separadorMiles(cartItem.price * cartItem.quantity)}{" "}
-                    </h3>
-                  </div>
+                  </Suspense>
                 ))}
                 <div className="cart-container-empty-info">
                   <p>Envio</p>
