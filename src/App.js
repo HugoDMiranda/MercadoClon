@@ -1,6 +1,6 @@
 import "./styles/App.css";
 import Busqueda from "./components/Busqueda";
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { ShoppingCartProvider } from "./context/CartContext";
 import Navbar from "./components/Navbar";
@@ -18,9 +18,7 @@ const Layout = () => {
       {/* <Busqueda /> */}
       <Navbar />
       <div className="container">
-        <Suspense fallback={<h2>Loading...</h2>}>
-          <Outlet />
-        </Suspense>
+        <Outlet />
       </div>
       <Footer />
     </>
