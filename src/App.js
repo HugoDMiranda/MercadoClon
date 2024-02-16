@@ -1,21 +1,24 @@
 import "./styles/App.css";
-import Busqueda from "./components/Busqueda";
 import { lazy } from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { ShoppingCartProvider } from "./context/CartContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Home from "./views/Home";
+import Resultados from "./views/Resultados";
+import Cart from "./views/Cart";
+import ProductoView from "./views/ProductoView";
+import NoAvailable from "./views/NoAvailable";
 
-const Home = lazy(() => import("./views/Home"));
-const Resultados = lazy(() => import("./views/Resultados"));
-const Cart = lazy(() => import("./views/Cart"));
-const ProductoView = lazy(() => import("./views/ProductoView"));
-const NoAvailable = lazy(() => import("./views/NoAvailable"));
+// const Home = lazy(() => import("./views/Home"));
+// const Resultados = lazy(() => import("./views/Resultados"));
+// const Cart = lazy(() => import("./views/Cart"));
+// const ProductoView = lazy(() => import("./views/ProductoView"));
+// const NoAvailable = lazy(() => import("./views/NoAvailable"));
 
 const Layout = () => {
   return (
     <>
-      {/* <Busqueda /> */}
       <Navbar />
       <div className="container">
         <Outlet />

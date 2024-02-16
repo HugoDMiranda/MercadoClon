@@ -58,7 +58,8 @@ function ProductoView() {
   }
 
   return (
-    <Suspense fallback={<p>Loading...</p>}>
+    <>
+      {/* <Suspense fallback={<p>Loading...</p>}> */}
       {resultado.length === 0 ? null : (
         <div className="productoView">
           <Filtros category={resultado.categories} />
@@ -91,7 +92,8 @@ function ProductoView() {
           </div>
         </div>
       )}
-    </Suspense>
+      {/* </Suspense> */}
+    </>
   );
 }
 

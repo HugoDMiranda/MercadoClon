@@ -50,15 +50,15 @@ function Resultados() {
           <Filtros category={resultados[0].categories} />
           <div className="resultados-container">
             <>
-              <Suspense fallback={<p>Loading...</p>}>
-                {currentPosts.map((resultado) => (
-                  <ResultadosLista
-                    resultado={resultado}
-                    key={resultado.id}
-                    id={resultado.id}
-                  />
-                ))}
-              </Suspense>
+              {/* <Suspense fallback={<p>Loading...</p>}> */}
+              {currentPosts.map((resultado) => (
+                <ResultadosLista
+                  resultado={resultado}
+                  key={resultado.id}
+                  id={resultado.id}
+                />
+              ))}
+              {/* </Suspense> */}
             </>
           </div>
 

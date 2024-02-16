@@ -110,22 +110,20 @@ function Cart() {
             ) : (
               <>
                 {cart.map((cartItem) => (
-                  <Suspense fallback={<p>Loading...</p>}>
-                    <div className="cart-container-empty-products">
-                      <img src={cartItem.img} alt="producto" />
-                      <p>{cartItem.name}</p>
-                      <div className="cart-container-empty-products-buttons">
-                        <button onClick={() => removeItem(cartItem.id)}>
-                          -
-                        </button>
-                        <span>{cartItem.quantity}</span>
-                        <button onClick={() => addCart(cartItem.id)}>+</button>
-                      </div>
-                      <h3>
-                        ${separadorMiles(cartItem.price * cartItem.quantity)}{" "}
-                      </h3>
+                  // <Suspense fallback={<p>Loading...</p>}>
+                  <div className="cart-container-empty-products">
+                    <img src={cartItem.img} alt="producto" />
+                    <p>{cartItem.name}</p>
+                    <div className="cart-container-empty-products-buttons">
+                      <button onClick={() => removeItem(cartItem.id)}>-</button>
+                      <span>{cartItem.quantity}</span>
+                      <button onClick={() => addCart(cartItem.id)}>+</button>
                     </div>
-                  </Suspense>
+                    <h3>
+                      ${separadorMiles(cartItem.price * cartItem.quantity)}{" "}
+                    </h3>
+                  </div>
+                  // </Suspense>
                 ))}
                 <div className="cart-container-empty-info">
                   <p>Envio</p>
