@@ -36,22 +36,22 @@ function Navbar() {
         </div>
         <div className="navbar-info">
           <div className="navbar-info-shop">
-            <p>
+            <Link to={`/noAvailable`}>
               <FaMapMarkerAlt />
               Ubicacion
-            </p>
-            <p>Categorias</p>
-            <p>Ofertas</p>
-            <p>Historial</p>
-            <p>Supermercado</p>
-            <p>Moda</p>
-            <p>Vender</p>
-            <p>Ayuda / PQR</p>
+            </Link>
+            <Link to={`/noAvailable`}>Categorias</Link>
+            <Link to={`/noAvailable`}>Ofertas</Link>
+            <Link to={`/noAvailable`}>Historial</Link>
+            <Link to={`/noAvailable`}>Supermercado</Link>
+            <Link to={`/noAvailable`}>Moda</Link>
+            <Link to={`/noAvailable`}>Vender</Link>
+            <Link to={`/noAvailable`}>Ayuda / PQR</Link>
           </div>
           <div className="navbar-info-user">
-            <p>Usuario</p>
-            <p>Mis compras</p>
-            <p>Favoritos</p>
+            <Link to={`/noAvailable`}>Usuario</Link>
+            <Link to={`/noAvailable`}>Mis compras</Link>
+            <Link to={`/noAvailable`}>Favoritos</Link>
             <Link to={`/cart`} className="navbar-info-user-cart">
               <AiOutlineShoppingCart />
               {quantity ? <p>{quantity >= 9 ? "9+" : quantity}</p> : null}
