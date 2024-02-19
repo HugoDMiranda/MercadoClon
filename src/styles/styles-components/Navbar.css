@@ -52,9 +52,11 @@
   flex-direction: row;
   margin-bottom: 10px;
 }
-.navbar-info p {
+.navbar-info a {
   margin: 0 10px 0 0;
   font-size: 13px;
+  text-decoration: none;
+  color: #666;
 }
 .navbar-info-shop, .navbar-info-user {
   display: flex;
