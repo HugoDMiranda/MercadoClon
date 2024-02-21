@@ -5,8 +5,12 @@ import { Link } from "react-router-dom";
 function Benefits() {
   return (
     <>
-      <Link to={`/noAvailable`}>
-        <img src="img/benefits/benefit1.png" alt="benefit1" />
+      <Link to={`/noAvailable`} className="benefits-container">
+        <img
+          src="img/benefits/benefit1.png"
+          alt="benefit1"
+          className="benefits-img"
+        />
       </Link>
     </>
   );
