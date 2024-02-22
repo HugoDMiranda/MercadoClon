@@ -36,9 +36,12 @@ function Navbar() {
         </div>
         <div className="navbar-info">
           <div className="navbar-info-shop">
-            <Link to={`/noAvailable`}>
+            <Link to={`/noAvailable`} className="pin">
               <FaMapMarkerAlt />
-              Ubicacion
+              <div>
+                <p>Ingresa tu</p>
+                <h6>Ubicacion</h6>
+              </div>
             </Link>
             <Link to={`/noAvailable`}>Categorias</Link>
             <Link to={`/noAvailable`}>Ofertas</Link>
