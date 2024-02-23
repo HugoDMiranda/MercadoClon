@@ -70,13 +70,40 @@
       flex-wrap: wrap;
     }
 
+    &-shop {
+      .pin {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        svg {
+          margin-top: 5px;
+          margin-right: 5px;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          h6,
+          p {
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+
     &-user {
       justify-content: flex-end;
 
       &-cart {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
+        svg {
+          margin-top: 5px;
+        }
+
         p,
         svg {
           position: absolute;
