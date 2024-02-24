@@ -56,7 +56,7 @@
   margin: 0 10px 0 0;
   font-size: 13px;
   text-decoration: none;
-  color: #666;
+  color: #303030;
 }
 .navbar-info-shop, .navbar-info-user {
   display: flex;
@@ -66,6 +66,12 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  transition: 0.5s;
+  border: 1px solid rgb(255, 230, 0);
+}
+.navbar-info-shop .pin:hover {
+  border-radius: 5px;
+  border: 1px solid #a8a8a8;
 }
 .navbar-info-shop .pin svg {
   margin-top: 5px;
@@ -75,9 +81,18 @@
   display: flex;
   flex-direction: column;
 }
-.navbar-info-shop .pin div h6,
+.navbar-info-shop .pin div h6 {
+  margin: 0 10px 0 0;
+  font-size: 13px;
+  text-decoration: none;
+  color: #303030;
+  padding: 0;
+}
 .navbar-info-shop .pin div p {
-  margin: 0;
+  margin: 0 10px 0 0;
+  font-size: 11px;
+  text-decoration: none;
+  color: #666;
   padding: 0;
 }
 .navbar-info-user {
@@ -90,6 +105,7 @@
 }
 .navbar-info-user-cart svg {
   margin-top: 5px;
+  margin-left: 30px;
 }
 .navbar-info-user-cart p,
 .navbar-info-user-cart svg {
@@ -97,8 +113,8 @@
 }
 .navbar-info-user-cart p {
   margin: 0;
-  margin-bottom: 25px;
-  margin-left: 15px;
+  margin-bottom: 30px;
+  margin-left: 45px;
   background-color: red;
   text-align: center;
   color: black;
@@ -108,7 +124,7 @@
   font-size: 12px;
 }
 .navbar-info-user a {
-  color: #666;
+  color: #303030;
   transition: 0.5s;
 }
 .navbar-info-user a:hover {

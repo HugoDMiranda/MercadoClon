@@ -37,10 +37,10 @@ function Navbar() {
         <div className="navbar-info">
           <div className="navbar-info-shop">
             <Link to={`/noAvailable`} className="pin">
-              <FaMapMarkerAlt />
+              <FaMapMarkerAlt size="20px" />
               <div>
                 <p>Ingresa tu</p>
-                <h6>Ubicacion</h6>
+                <h6>ubicacion</h6>
               </div>
             </Link>
             <Link to={`/noAvailable`}>Categorias</Link>
@@ -56,7 +56,7 @@ function Navbar() {
             <Link to={`/noAvailable`}>Mis compras</Link>
             <Link to={`/noAvailable`}>Favoritos</Link>
             <Link to={`/cart`} className="navbar-info-user-cart">
-              <AiOutlineShoppingCart />
+              <AiOutlineShoppingCart size="20px" />
               {quantity ? <p>{quantity >= 9 ? "9+" : quantity}</p> : null}
             </Link>
           </div>
