@@ -12,9 +12,7 @@ function Pagination({ totalPosts, postsPerPage, setCurrentPage, currentPage }) {
       <button
         className="buttons-next-back"
         onClick={() =>
-          currentPage === 1
-            ? setCurrentPage(1)
-            : setCurrentPage(currentPage - 1)
+          currentPage <= 1 ? setCurrentPage(1) : setCurrentPage(currentPage - 1)
         }
       >
         &lt; Anterior
@@ -34,9 +32,7 @@ function Pagination({ totalPosts, postsPerPage, setCurrentPage, currentPage }) {
       <button
         className="buttons-next-back"
         onClick={() =>
-          currentPage === 3
-            ? setCurrentPage(3)
-            : setCurrentPage(currentPage + 1)
+          currentPage >= 6 ? setCurrentPage(6) : setCurrentPage(currentPage + 1)
         }
       >
         Siguiente &gt;
