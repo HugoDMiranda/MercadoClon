@@ -33,12 +33,12 @@ function Home() {
         />
       </div>
       <div className="home-stores">
-        <h3>Las mejores tiendas te esperan</h3>
+        <h4>Las mejores tiendas te esperan </h4>
         <SliderStores />
-        <h3>
+        <h4>
           Beneficios de Mercado Puntos
-          <Link to={`/noAvailable`}>Ver todos los beneficios</Link>
-        </h3>
+          <Link to={`/noAvailable`}> Ver todos los beneficios</Link>
+        </h4>
         <Benefits />
       </div>
     </div>
