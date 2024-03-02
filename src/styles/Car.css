@@ -85,6 +85,9 @@
   padding: 50px 0;
   border-bottom: 1px solid rgb(219, 219, 219);
 }
+.cart-container-empty-info button {
+  cursor: pointer;
+}
 .cart-container-empty-info p {
   margin: 0px;
 }

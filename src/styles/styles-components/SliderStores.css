@@ -1,6 +1,9 @@
 .slider-stores {
   margin: 0;
 }
+.slider-stores button {
+  cursor: pointer;
+}
 .slider-stores .arrow-button {
   width: 70px;
   height: 70px;

@@ -110,7 +110,6 @@ function Cart() {
             ) : (
               <>
                 {cart.map((cartItem) => (
-                  // <Suspense fallback={<p>Loading...</p>}>
                   <div className="cart-container-empty-products">
                     <img src={cartItem.img} alt="producto" />
                     <p>{cartItem.name}</p>
@@ -123,7 +122,6 @@ function Cart() {
                       ${separadorMiles(cartItem.price * cartItem.quantity)}{" "}
                     </h3>
                   </div>
-                  // </Suspense>
                 ))}
                 <div className="cart-container-empty-info">
                   <p>Envio</p>
